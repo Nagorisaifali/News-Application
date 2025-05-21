@@ -14,11 +14,12 @@ const Card = ({ data }) => {
     <div className='cardContainer'>
       {data.map((item, index) => (
         <div key={index} className='card'>
-          <img src={item.urlToImage} alt="" />
+          <img src={item.Image[index]} alt="" />
           <div className='content'>
-            <a className='title'  onClick={() => window.open(item.url)}>{item.title}</a>
-            <p>{item.description}</p>
-            <button onClick={() => window.open(item.url)} >Read More</button>
+            <p>{item.Title}</p>
+            <p>{item.Status}</p>
+            <p>{item.Paragrap}</p>
+            <button className='w-[60px] h-[50px]' onClick={() => window.open(item.Paragraph)} >More Stories</button>
           </div>
         </div>
       ))}
